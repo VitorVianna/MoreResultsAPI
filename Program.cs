@@ -15,12 +15,18 @@ builder.Services.AddDbContext<DataContext>(options =>
 
 builder.Services.AddScoped<IUsuarioService, UsuarioService>();
 var app = builder.Build();
-
+builder.Services.AddCors();
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors(c => {
+    c.AllowAnyHeader();
+    c.AllowAnyMethod();
+    c.AllowAnyOrigin();
+});
 
 app.UseHttpsRedirection();
 

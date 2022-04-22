@@ -21,6 +21,7 @@ namespace MoreResults.API.Migrations
                     Telefone = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Cpf = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Senha = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Cep = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     RUA = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     NUMERO = table.Column<int>(type: "int", nullable: true),
                     BAIRRO = table.Column<string>(type: "nvarchar(max)", nullable: true),
