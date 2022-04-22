@@ -14,6 +14,7 @@ namespace MoreResults.API.Model
         public string? Telefone { get; set; }
         public string? Cpf { get; set; }
         public string Senha { get; set; }
+        public string? Cep { get; set; }
         public string? RUA { get; set; }
         public int? NUMERO { get; set; }
         public string? BAIRRO { get; set; }

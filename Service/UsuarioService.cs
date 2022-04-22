@@ -58,6 +58,7 @@ namespace MoreResults.API.Service
 
                 _context.Usuarios.Add(new UsuarioDto
                 {
+                    Cep = usuario.Cep,
                     BAIRRO = usuario.BAIRRO,
                     CIDADE = usuario.CIDADE,
                     COMPLEMENTO = usuario.COMPLEMENTO,
