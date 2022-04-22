@@ -12,7 +12,7 @@ using MoreResults.API.Dados;
 namespace MoreResults.API.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20220421041525_CreateInitial")]
+    [Migration("20220421225052_CreateInitial")]
     partial class CreateInitial
     {
         /// <inheritdoc />
@@ -25,7 +25,7 @@ namespace MoreResults.API.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("MoreResults.API.Model.Usuario", b =>
+            modelBuilder.Entity("MoreResults.API.Model.UsuarioDto", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -40,6 +40,9 @@ namespace MoreResults.API.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("COMPLEMENTO")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Cep")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Cpf")
