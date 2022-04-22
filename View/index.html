@@ -19,7 +19,7 @@
     </div>
     <br />
     <div class="container">
-        <button type="button" class="btn btn-primary"><i class="glyphicon glyphicon-user"></i> Novo Usuário</button>
+        <button type="button" id="NovoUsuario" class="btn btn-primary"><i class="glyphicon glyphicon-user"></i> Novo Usuário</button>
     </div>
     <br />
     <div class="container" id="linha">
@@ -42,7 +42,7 @@
                         <td>{{usuario.name}}</td>
                         <td>{{usuario.email}}</td>
                         <td>{{usuario.telefone}}</td>
-                        <td>{{usuario.senha}}</td>
+                        <td><input class="w3-input w3-border" type="password" :value="usuario.senha" name="Senha" id="txtSenha" disabled></td>
                         <td><a v-on:click="Editar(usuario.id)"><i CLASS="glyphicon glyphicon-pencil"></i></a></td>
                         <td><a v-on:click="Excluir(usuario.id)"><i CLASS="glyphicon glyphicon-remove"></i></a></td>
                     </tr>
